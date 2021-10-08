@@ -2,16 +2,11 @@
 @import "./base/mixins";
 @import "./base/mediaQueries";
 @import "./base/variables";
+@import "./utils/fluidType";
 @import "./base/typography";
-// @import "./base/layout";
-// @import "./base/html";
+@import "./base/html";
 
-// // utils
-// @import "./utils/*";
-// // components
-// @import 'components/*';
+@import "./components/siteHeader";
 
-// // modifiers
-// @import "./modifiers/menu-open";
 
 @import "./base/layout";
