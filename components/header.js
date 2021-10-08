@@ -5,7 +5,7 @@ export default function Header() {
 	return (
 		<header className="site-header">
 			<div className="container">
-				<div className="site-header__inner">
+				<div className="site-header__inner container-small">
 					<Crclogo className="site-header__logo" />
 					<nav>
 						<ul className="site-header__nav">

@@ -32,3 +32,13 @@ $mq-static-breakpoint: desktop;
 
 // import sass mq npm package
 @import "sass-mq";
+
+/*
+
+usage 
+
+@include mq($from: screen740) {
+
+}
+
+*/

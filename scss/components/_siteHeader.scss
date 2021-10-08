@@ -7,25 +7,28 @@
 
 .site-header__inner {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	padding: 15px 0 15px 15px;
+	padding: 10px 5px 5px 5px;
 }
 
 .site-header__logo {
-	max-width: 220px;
+	max-width: 120px;
 }
 
 .site-header__nav {
 	list-style: none;
+	letter-spacing: -0.5px;
+  margin: 10px 0;
 	padding-left: 0;
 	display: inline-block;
 	color: #3a3939;
-	@include fluid-type(font-size, $minScreen, $maxScreen, 20px, 24px);
+	font-size: 14px;
 }
 
 .site-header__nav-list {
 	display: inline-block;
-	padding: 0 15px;
+	padding: 0 7px;
 }
 
 .site-header__anchor {
@@ -49,4 +52,41 @@
 .site-header__anchor:hover:after { 
   width: 100%; 
   left: 0; 
+}
+
+@include mq($from: screen740) {
+
+	.site-header__nav {
+		font-size: 18px;
+    margin-left: 10px;
+	}
+
+	.site-header__inner {
+		flex-direction: row;
+		padding: 15px 10px;
+	}
+
+	.site-header__logo {
+		max-width: 195px;
+	}
+
+	.site-header__nav-list {
+		padding: 0 15px;
+	}
+
+}
+
+@include mq($from: screen980) {
+
+	.site-header__nav {
+		font-size: 24px;
+	}
+
+	.site-header__inner {
+		padding: 15px 0 15px 15px;
+	}
+
+	.site-header__logo {
+		max-width: 220px;
+	}
 }

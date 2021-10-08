@@ -8,7 +8,7 @@ html {
 }
 
 body {
-
+  color: $grey;
 }
 
 .container {
@@ -17,6 +17,33 @@ body {
   margin: 0 auto;
 }
 
+.container-small {
+  width: 100%;
+  max-width: $containerSmWidth;
+  margin: 0 auto;
+}
+
+.bold-font {
+  font-weight: $fontWeightBold;
+}
+
+.placeholder-about-me {
+  height: 400px;
+  padding-top: 50px;
+  background: rgb(226, 226, 226);
+  text-align: center;
+}
+
+.placeholder-counselling {
+  height: 400px;
+  padding-top: 50px;
+  background: rgb(226, 226, 226);
+  text-align: center;
+}
+
+.placeholder-appointments {
+  
+}
 
 @media (min-width: 480px) {
   h1 {

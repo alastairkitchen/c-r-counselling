@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/header'
+import Footer from '../components/footer'
 import Image from 'next/image'
 import Layout from '../components/layout'
 
@@ -25,6 +26,13 @@ export default function Home() {
             width={1440}
             height={700}
           />
+
+          <div className="placeholder-about-me">[ABOUT ME]</div>
+          <div className="placeholder-counselling">[COUNSELLING]</div>
+          <div className="placeholder-appointments"></div>
+
+          <Footer></Footer>
+
 
         </div>
       </main>

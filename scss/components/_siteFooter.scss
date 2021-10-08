@@ -1,0 +1,17 @@
+.site-footer {
+	background-color: $lightGrey;
+    padding: 30px 0;
+
+}
+
+.site-footer__inner {
+	display: flex;
+}
+
+.site-footer__left-col {
+	max-width: 70%;
+}
+
+.site-footer__right-col {
+	padding-left: 4vw;
+}
