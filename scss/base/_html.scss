@@ -1,4 +1,7 @@
 
+html {
+  font-size: 16px;
+}
 
 :focus {
   outline: $black auto 1px;
@@ -10,7 +13,12 @@ a {
 
 p {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+ul {
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 address {

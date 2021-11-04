@@ -1,14 +1,18 @@
 @import "./base/normalize";
 @import "./base/mixins";
-@import "./base/mediaQueries";
+@import "./utils/mediaQueries";
 @import "./base/variables";
+@import "./utils/list";
 @import "./utils/fluidType";
 @import "./base/typography";
 @import "./base/html";
 
-@import "./components/siteHeader";
-@import "./components/siteFooter";
+@import "./components/header";
+@import "./components/svg";
+@import "./components/footer";
 @import "./components/inlineList";
+@import "./components/anchorLink";
+@import "./components/linkList";
 
 
 @import "./base/layout";

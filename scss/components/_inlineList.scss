@@ -31,3 +31,14 @@
 		color: $grey;
 	}
 }
+
+/*
+	*	Modifiers
+	*/
+
+.inline-list--remove-spacers {
+
+	li:after {
+		display: none;
+	}
+}

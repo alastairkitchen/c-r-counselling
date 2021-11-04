@@ -23,6 +23,11 @@ body {
   margin: 0 auto;
 }
 
+.row {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .bold-font {
   font-weight: $fontWeightBold;
 }
