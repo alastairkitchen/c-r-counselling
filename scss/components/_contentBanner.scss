@@ -1,0 +1,15 @@
+.content-banner {
+	background: $lightGrey;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+.content-banner__text {
+  line-height: 1.5;
+	@include fluid-type(16px, 26px);
+}
+
+/*
+	* Media Queries
+	*/

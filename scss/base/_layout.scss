@@ -23,6 +23,12 @@ body {
   margin: 0 auto;
 }
 
+.container-xsmall {
+  width: 100%;
+  max-width: $containerXsWidth;
+  margin: 0 auto;
+}
+
 .row {
   padding-left: 10px;
   padding-right: 10px;

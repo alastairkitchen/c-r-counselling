@@ -1,0 +1,36 @@
+/*
+	* Content Row
+	*/
+
+
+.content-row {
+	display: flex;
+	flex-direction: column;
+}
+
+.content-row__col-1 {
+	width: 100%;
+}
+
+.content-row__col-2 {
+	width: 100%;
+}
+
+/*
+	* Media Queries
+	*/
+
+	@include mq($from: screen980) {
+
+		.content-row {
+			flex-direction: row;
+		}
+	
+		.content-row__col-1 {
+			width: 50%;
+		}
+		
+		.content-row__col-2 {
+			width: 50%;
+		}
+	}

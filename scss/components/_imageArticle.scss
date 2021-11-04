@@ -1,0 +1,48 @@
+/*
+	* Image Article
+	*/
+
+.image-article {
+
+	p {
+		line-height: 1.3;
+	}
+}
+
+.image-article__row {
+	display: flex;
+	flex-direction: column;
+	padding: 50px 0;
+}
+
+.image-article__image-col {
+	width: 100%;
+	padding-bottom: 30px;
+}
+
+.image-article__text-col {
+	width: 100%;
+}
+
+/*
+	* Media Queries
+	*/
+
+@include mq($from: screen980) {
+	
+	.image-article__row {
+		flex-direction: row;
+	}
+
+	.image-article__image-col {
+		width: 50%;
+		padding-right: clamp(30px, 4vw, 50px);
+		padding-bottom: 0;
+	}
+
+	.image-article__text-col {
+		width: 50%;
+	}
+
+}
+

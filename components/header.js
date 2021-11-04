@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Crclogo from '../public/images/logos/crcounselling-logo.svg'
 
 export default function Header() {

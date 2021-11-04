@@ -1,0 +1,25 @@
+
+.content-box-banner {
+
+	h3 {
+		margin-bottom: 15px;
+	}
+}
+
+.content-box-banner__box {
+	background-color: $lightGrey;
+	padding: 30px;
+}
+
+.content-box-banner__row {
+	padding: 50px 0;
+}
+
+/*
+	* Media Queries
+	*/
+
+@include mq($from: screen980) {
+	
+
+}

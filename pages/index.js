@@ -1,10 +1,17 @@
 import Head from 'next/head'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import Image from 'next/image'
 import Layout from '../components/layout'
+import HeroBanner from "../components/heroBanner";
+import ContentBanner from "../components/contentBanner";
+import ImageArticle from "../components/imageArticle/imageArticle";
+import ContentBoxBanner from "../components/contentBoxBanner/contentBoxBanner";
+
 
 export default function Home() {
+
+  const containerContent = `Private one-to-one counselling for adults, children and young people. Glasgow-based counsellor experienced in providing brief and long-term therapy. Qualified in talking therapy, online therapy, creative arts and play-based approaches.`
+
   return (
     <Layout>
 
@@ -20,14 +27,11 @@ export default function Home() {
 
         <Header></Header>
         <div className="container">
-          <Image
-            src="/images/desktop-hero.png"
-            alt="Catherine sat in her counselling room smiling"
-            width={1440}
-            height={700}
-          />
 
-          <div className="placeholder-about-me">[ABOUT ME]</div>
+          <HeroBanner />
+          <ContentBanner content={containerContent} />
+          <ImageArticle />
+          <ContentBoxBanner />
           <div className="placeholder-counselling">[COUNSELLING]</div>
           <div className="placeholder-appointments"></div>
 
