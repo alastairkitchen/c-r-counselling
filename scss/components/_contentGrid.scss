@@ -17,6 +17,18 @@
 }
 
 /*
+	* Modifiers
+	*/
+
+.content-grid--3-col {
+
+	.content-grid__col-1 {
+
+	}
+
+}
+
+/*
 	* Media Queries
 	*/
 
@@ -35,4 +47,27 @@
 			width: 50%;
 			padding-left: clamp(15px, 2vw, 25px);
 		}
+
+		/*
+			* Modifiers
+			*/
+
+		.content-grid--3-col {
+
+			.content-grid__col-1 {
+				width: 33.3333%;
+			}
+
+			.content-grid__col-2 {
+				width: 33.3333%;
+				padding-right: clamp(15px, 2vw, 25px);
+			}
+
+			.content-grid__col-3 {
+				width: 33.3333%;
+				padding-left: clamp(15px, 2vw, 25px);
+			}
+
+		}
+
 	}

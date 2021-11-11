@@ -8,11 +8,11 @@
 
 .content-box-banner__box {
 	background-color: $lightGrey;
-	padding: 30px;
+	padding: 30px 15px;
 }
 
 .content-box-banner__row {
-	padding: 50px 0;
+	padding: 25px 0;
 }
 
 /*
@@ -20,6 +20,24 @@
 	*/
 
 @include mq($from: screen980) {
-	
 
+	.content-box-banner__box {
+		padding: 30px;
+	}
+	
+	.content-box-banner__row {
+		padding: 50px 0;
+	}
+
+}
+
+@include mq($until: screen980) {
+
+
+.content-box-banner {
+
+	ul {
+		margin-bottom: 0;
+	}
+}
 }
