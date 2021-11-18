@@ -11,22 +11,29 @@ body {
   color: $grey;
 }
 
-.container {
+.container-base {
   width: 100%;
-  max-width: $containerWidth;
   margin: 0 auto;
+}
+
+.container {
+  @extend .container-base;
+  max-width: $containerWidth;
 }
 
 .container-small {
-  width: 100%;
+  @extend .container-base;
   max-width: $containerSmWidth;
-  margin: 0 auto;
 }
 
 .container-xsmall {
-  width: 100%;
+  @extend .container-base;
   max-width: $containerXsWidth;
-  margin: 0 auto;
+}
+
+.container-large {
+  @extend .container-base;
+  max-width: $containerLgWidth;
 }
 
 .row {

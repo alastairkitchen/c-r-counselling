@@ -14,8 +14,10 @@
     "sass": "^1.42.1"
   },
   "devDependencies": {
+    "@glidejs/glide": "^3.4.1",
     "@svgr/webpack": "^5.5.0",
     "html-react-parser": "^1.4.0",
+    "next-transpile-modules": "^9.0.0",
     "sass-mq": "^5.0.1"
   }
 }

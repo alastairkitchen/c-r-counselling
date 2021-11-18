@@ -1,0 +1,89 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+
+/*
+	* Glide theming
+	*/
+
+.glide {
+	padding-bottom: 40px;
+	text-align: left;
+}
+
+.glide__slide {
+	height: 140px;
+	line-height: 1.4;
+	position: relative;
+	background-image: url(/images/quote-icon.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15px) calc(100% - 15px);
+}
+
+.glide__slide-inner {
+	background-color: $fadeOrange;
+	padding: 20px;
+	line-height: 1.4;
+	border-radius: 5px;
+	position: absolute;
+	width: 100%;
+	height: calc(100% - 30px);
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.glide__bullets {
+	bottom: 30px;
+}
+
+.glide__bullet {
+	background-color: $lightOrange;
+	border: 2px solid $lightOrange;
+
+	&:hover,
+	&:focus {
+		background-color: lighten($lightOrange, 10%);
+		border: 2px solid $lightOrange;
+	}
+}
+
+.glide__arrows {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+}
+
+.glide__arrow {
+	background-color: $lightOrange;
+	border: none;
+	top: 0;
+	left: 0;
+}
+
+.glide__arrow--left {
+	left: 0;
+}
+
+.glide__arrow--right {
+	right: 0;
+	left: auto;
+}
+
+/*
+	* Slideshow Banner
+	*/
+
+.slideshow-banner {
+
+	padding: 50px 0;
+}
+
+.slideshow-banner__row {
+	text-align: center;
+}
+
+.slideshow-banner_title {
+	margin-bottom: 40px;
+}
+

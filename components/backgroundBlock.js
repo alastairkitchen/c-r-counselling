@@ -8,6 +8,9 @@ export default function BackgroundBlock({ children, container, background }) {
 		if (containerClass === 'small') {
 			return 'container-small'
 		}
+		if (containerClass === 'none') {
+			return ''
+		}
 		return 'container-small'
 	}
 
