@@ -39,3 +39,6 @@ h6 {
   @include fluid-type(17px, 18px);
 }
 
+.bold {
+  font-weight: $fontWeightBold;
+}

@@ -8,6 +8,7 @@ import ContentBanner from "../components/contentBanner";
 import ImageArticle from "../components/imageArticle/imageArticle";
 import ContentBoxBanner from "../components/contentBoxBanner/contentBoxBanner";
 import SlideshowBanner from "../components/slideshowBanner";
+import FormBlock from "../components/formBlock";
 
 import CathyHeadShot from '../public/images/cathy-headshot-desktop.png';
 import RoomImage from '../public/images/counselling-room-setup.png';
@@ -19,6 +20,18 @@ import { backgroundColours } from '../constants/constants';
 export default function Home() {
 
   const containerContent = `Private one-to-one counselling for adults, children and young people. Glasgow-based counsellor experienced in providing brief and long-term therapy. Qualified in talking therapy, online therapy, creative arts and play-based approaches.`
+  const testimonails = [
+    'Catherine is very easy to talk to and because of this her office became a safe space for me',
+    'I learnt a lot about how to deal with feelings and emotions',
+    'Catherine helped me build up my confidence to be more open and communicate with others',
+    'Slide 4 lorem ipsum',
+    // 'Slide 5 lorem ipsum'
+  ]
+
+  const contactContent = ` <p><span className="bold">NHS 24</span> - 111</p>
+                          <p><span className="bold">Samaritans</span> - 116 123</p>
+                          <p><span className="bold">Shout</span> - text “Shout” to 85258</p>
+                          <p><span className="bold">Befrienders International</span> - www.befrienders.org</p>`;
 
   return (
     <Layout>
@@ -117,10 +130,26 @@ export default function Home() {
             />
           </BackgroundBlock>
 
-          <SlideshowBanner />
+          <ContentBanner
+            title='Contact'
+            content={'Use the secure form below to book in for an initial consultation or to ask any questions you may have. I will respond to your message within 2 business days.'}
+            size="small"
+            containerSize='small'
+          />
 
+          <BackgroundBlock background={backgroundColours.grey}>
+            <FormBlock background={backgroundColours.white} />
+          </BackgroundBlock>
 
-          <div className="placeholder-appointments"></div>
+          <ContentBanner
+            content={'If you are feeling overwhelmed and unable to cope, it is important you seek help now. If you are planning to immediately act upon suicidal thoughts, call 999. Otherwise, here are some more crisis options:'}
+            htmlContent={contactContent}
+            size="small"
+            textAlign='left'
+            containerSize='small'
+          />
+
+          <SlideshowBanner title='Testimonials' slidesContent={testimonails} />
 
           <Footer></Footer>
 
