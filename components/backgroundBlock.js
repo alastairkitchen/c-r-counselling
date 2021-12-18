@@ -1,4 +1,6 @@
-export default function BackgroundBlock({ children, container, background }) {
+import React from 'react';
+
+export const BackgroundBlock = React.forwardRef(({ children, container, background, htmlId }, ref) => {
 
 	const containerClass = (containerClass) => {
 
@@ -19,13 +21,32 @@ export default function BackgroundBlock({ children, container, background }) {
 		white: 'background-block--white',
 	}
 
-	return (
-		<article className={`background-block ${background ? backgroundColourMap[background] : ''}`}>
-			<div className={`${containerClass(container)}`}>
-				<div className="row">
-					{children}
+	if (htmlId) {
+		return (
+			<article
+				ref={ref}
+				id={htmlId}
+				className={`background-block ${background ? backgroundColourMap[background] : ''}`}
+			>
+				<div className={`${containerClass(container)}`}>
+					<div className="row">
+						{children}
+					</div>
 				</div>
-			</div>
-		</article>
-	)
-}
+			</article>
+		)
+	} else {
+		return (
+			<article
+				ref={ref}
+				className={`background-block ${background ? backgroundColourMap[background] : ''}`}
+			>
+				<div className={`${containerClass(container)}`}>
+					<div className="row">
+						{children}
+					</div>
+				</div>
+			</article>
+		)
+	}
+});

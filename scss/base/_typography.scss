@@ -3,7 +3,7 @@
  * font-family: 'Barlow', sans-serif;
  */
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
 
 html {
   font-family: 'Barlow', sans-serif;
@@ -16,11 +16,13 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: $headerFontFamily;
   font-weight: $fontWeightLight;
   margin: 0;
 }
 
 .h2 {
+  font-family: $headerFontFamily;
   font-size: 32px;
   border-bottom: 1px solid red;
   display: inline-block;
@@ -30,6 +32,7 @@ h6 {
 }
 
 .h3 {
+  font-family: $headerFontFamily;
   font-weight: $fontWeightBold;
   @include fluid-type(18px, 24px);
 }
