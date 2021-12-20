@@ -1,5 +1,5 @@
 .site-header {
-	background: rgb(255 255 255 / 60%);
+	background: rgb(255 255 255 / 80%);
 	position: fixed;
 	width: 100%;
 	z-index: 100;
@@ -22,7 +22,7 @@
   margin: 10px 0;
 	padding-left: 0;
 	display: inline-block;
-	color: #3a3939;
+	color: $grey;
 	font-size: 14px;
 }
 
@@ -36,24 +36,41 @@
 	position: relative;
 	color: $grey;
 	padding: 10px 0;
+	transition: color .2s ease-in-out;
 }
 
 .site-header__anchor:after {    
   background: none repeat scroll 0 0 transparent;
-  bottom: 0;
+  bottom: 5px;
   content: "";
   display: block;
   height: 2px;
   left: 50%;
   position: absolute;
-  background: #F8A300;
+  background: $lightOrange;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-.site-header__anchor:hover:after { 
-  width: 100%; 
-  left: 0; 
+
+.site-header__anchor:hover{ 
+  color: $greyHover;
 }
+
+/*
+	* Modifiers
+	*/
+
+.site-header__nav-list--active {
+
+	.site-header__anchor:after {
+		width: 100%; 
+		left: 0;
+	}
+}
+
+/*
+	* Media queries
+	*/
 
 @include mq($from: screen740) {
 

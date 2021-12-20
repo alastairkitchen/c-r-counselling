@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const BackgroundBlock = React.forwardRef(({ children, container, background, htmlId }, ref) => {
+export const BackgroundBlock = ({ children, container, background, htmlId }) => {
 
 	const containerClass = (containerClass) => {
 
@@ -24,7 +24,6 @@ export const BackgroundBlock = React.forwardRef(({ children, container, backgrou
 	if (htmlId) {
 		return (
 			<article
-				ref={ref}
 				id={htmlId}
 				className={`background-block ${background ? backgroundColourMap[background] : ''}`}
 			>
@@ -38,7 +37,6 @@ export const BackgroundBlock = React.forwardRef(({ children, container, backgrou
 	} else {
 		return (
 			<article
-				ref={ref}
 				className={`background-block ${background ? backgroundColourMap[background] : ''}`}
 			>
 				<div className={`${containerClass(container)}`}>
@@ -49,4 +47,4 @@ export const BackgroundBlock = React.forwardRef(({ children, container, backgrou
 			</article>
 		)
 	}
-});
+};

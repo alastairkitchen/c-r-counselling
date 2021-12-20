@@ -1,19 +1,23 @@
+import React from 'react';
 import Crclogo from '../public/images/logos/crcounselling-logo.svg'
 
-export default function Header({ aboutMeRef, counsellingRef, appointmentsRef, contactRef }) {
+
+export const Header = React.forwardRef(({ aboutMeRef, counsellingRef, appointmentsRef, contactRef }, headerRef) => {
 
 	const scrollToElement = (e, element) => {
 		e.preventDefault();
-		element.scrollIntoView({ behavior: "smooth" });
+		const yOffset = headerRef.current.clientHeight;
+		const y = element.getBoundingClientRect().top + window.pageYOffset + -yOffset;
+		window.scrollTo({ top: y, behavior: 'smooth' });
 	}
 
 	return (
-		<header className="site-header">
+		<header className="site-header" ref={headerRef}>
 			<div className="container">
 				<div className="site-header__inner container-small">
 					<Crclogo className="site-header__logo" />
 					<nav>
-						<ul className="site-header__nav">
+						<ul className="site-header__nav" id="site-header-navigation">
 							<li className="site-header__nav-list">
 								<a
 									onClick={(event) => scrollToElement(event, aboutMeRef.current)}
@@ -50,4 +54,4 @@ export default function Header({ aboutMeRef, counsellingRef, appointmentsRef, co
 
 		</header>
 	)
-}
+})
