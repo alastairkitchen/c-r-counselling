@@ -40,7 +40,7 @@ export default function SlideshowBanner({ title, slidesContent }) {
 			<article className='slideshow-banner'>
 				<div className="container-small">
 					<div className="row slideshow-banner__row">
-						<h2 className="h2 slideshow-banner_title">{title}</h2>
+						<span className="font-spacer"><h2 className="h2 slideshow-banner_title">{title}</h2></span>
 						<div className="glide">
 
 							<div className="glide__track" data-glide-el="track">

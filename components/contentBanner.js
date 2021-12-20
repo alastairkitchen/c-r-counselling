@@ -7,7 +7,7 @@ export default function ContentBanner({ title, content, size, textAlign, htmlCon
 			<div className={`${containerSize ? `container-${containerSize}` : 'container-xsmall'}`}>
 				<div className="row">
 					{title && (
-						<h2 className="h2">{title}</h2>
+						<span className="font-spacer"><h2 className="h2">{title}</h2></span>
 					)}
 					<p className="content-banner__text">{content}</p>
 					{htmlContent && (<div className="content-banner__custom-text">{parse(htmlContent)}</div>)}

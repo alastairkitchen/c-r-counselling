@@ -38,11 +38,16 @@
 }
 
 .site-footer__links-list {
-	margin-bottom: $siteSpacer;
+	margin-bottom: $siteSpacerXl;
 }
 
 .site-footer__social-icons {
-	margin-bottom: $siteSpacer;
+	margin-bottom: $siteSpacerLg;
+}
+
+.site-footer__paragraph {
+	display: flex;
+	line-height: 1.2;
 }
 
 /*

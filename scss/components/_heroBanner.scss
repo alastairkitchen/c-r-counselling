@@ -1,0 +1,34 @@
+.hero-banner {
+	position: relative;
+	height: 500px;
+	max-width: 2000px;
+	margin: 0 auto;
+}
+
+/*
+	* Media queries
+	*/
+
+@include mq($from: screen740) {
+
+	.hero-banner {
+		height: 610px;
+	}
+
+}
+
+@include mq($from: screen1300) {
+
+	.hero-banner {
+		height: 650px;
+	}
+
+}
+
+@include mq($from: screen1800) {
+
+	.hero-banner {
+		height: 750px;
+	}
+
+}

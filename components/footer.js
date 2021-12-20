@@ -12,12 +12,12 @@ export default function Footer() {
 
 						<div className="site-footer__address-col">
 							<address>
-								<p><span className="bold-font">Address:</span> Catherine Robertson Counselling, Sandyford Place, Glasgow G3 7NG</p>
+								<p className="site-footer__paragraph"><span className="bold-font">Address: </span> Catherine Robertson Counselling, Sandyford Place, Glasgow G3 7NG</p>
 							</address>
-							<p><span className="bold-font">Hours available:</span> Monday 1pm - 5pm and Tuesday 5.30pm - 9pm</p>
-							<p><span className="bold-font">Call:</span> 07843 933 343</p>
-							<p><span className="bold-font">Email:</span> <a className="anchor-link-alt" href="mailto:catherine@crcounselling.com">catherine@crcounselling.com</a></p>
-							<SocialIcons listClass="footer__social-icons" />
+							<p className="site-footer__paragraph"><span className="bold-font">Hours available: </span> Monday 1pm - 5pm and Tuesday 5.30pm - 9pm</p>
+							<p className="site-footer__paragraph"><span className="bold-font">Call: </span> 07843 933 343</p>
+							<p className="extra-paragraph-margin site-footer__paragraph"><span className="bold-font">Email: </span> <a className="anchor-link-alt" href="mailto:catherine@crcounselling.com">catherine@crcounselling.com</a></p>
+							<SocialIcons listClass="site-footer__social-icons" />
 							<ul className="inline-list">
 								<li><a href="#">Privacy Policy</a></li>
 								<li><a href="#">Cookies Policy</a></li>

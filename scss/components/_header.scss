@@ -5,11 +5,14 @@
 	z-index: 100;
 }
 
+.site-header__wrapper {
+	padding: 10px 5px 5px 5px;
+}
+
 .site-header__inner {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 10px 5px 5px 5px;
 }
 
 .site-header__logo {
@@ -79,9 +82,12 @@
     margin-left: 10px;
 	}
 
+	.site-header__wrapper {
+		padding: 15px 10px;
+	}
+
 	.site-header__inner {
 		flex-direction: row;
-		padding: 15px 10px;
 	}
 
 	.site-header__logo {
@@ -100,7 +106,7 @@
 		font-size: 24px;
 	}
 
-	.site-header__inner {
+	.site-header__wrapper {
 		padding: 15px 0 15px 15px;
 	}
 

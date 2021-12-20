@@ -25,7 +25,7 @@ h6 {
   font-family: $headerFontFamily;
   font-size: 32px;
   border-bottom: 3px solid $lightOrange;
-  display: inline-block;
+  display: inline;
   margin-bottom: 15px;
   padding-bottom: 5px;
   font-weight: bold;
@@ -44,4 +44,14 @@ h6 {
 
 .bold {
   font-weight: $fontWeightBold;
+}
+
+.font-spacer {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.extra-paragraph-margin {
+  margin-bottom: 20px;
 }
