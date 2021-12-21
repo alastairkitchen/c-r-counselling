@@ -3,7 +3,9 @@ import React from 'react';
 export const BackgroundBlock = ({ children, container, background, htmlId }) => {
 
 	const containerClass = (containerClass) => {
-
+		if (containerClass === 'xxsmall') {
+			return 'container-xxsmall'
+		}
 		if (containerClass === 'xsmall') {
 			return 'container-xsmall'
 		}

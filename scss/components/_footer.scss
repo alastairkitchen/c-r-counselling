@@ -7,6 +7,10 @@
 	 }
 }
 
+.site-footer-spacer {
+	height: 30px;
+}
+
 .site-footer__inner {
 	display: flex;
 	flex-direction: column;
@@ -58,6 +62,10 @@
 
 	.site-footer__inner {
 		flex-direction: row;
+	}
+
+	.site-footer-spacer {
+		height: 200px;
 	}
 
 	.site-footer__address-col {

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import SocialIcons from './socialIcons/socialIcons';
 import BacpLogo from '/Volumes/alimac/websites/c-r-counselling/public/images/accreditations/bacp-logo.png';
 import ActoLogo from '/Volumes/alimac/websites/c-r-counselling/public/images/accreditations/acto-logo.png';
+import Link from 'next/link'
 
 export default function Footer() {
 	return (
@@ -19,8 +20,8 @@ export default function Footer() {
 							<p className="extra-paragraph-margin site-footer__paragraph"><span className="bold-font">Email: </span> <a className="anchor-link-alt" href="mailto:catherine@crcounselling.com">catherine@crcounselling.com</a></p>
 							<SocialIcons listClass="site-footer__social-icons" />
 							<ul className="inline-list">
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Cookies Policy</a></li>
+								<li><Link href="/privacy-policy"><a href="/privacy-policy">Privacy Policy</a></Link></li>
+								<li><Link href="/cookies-policy"><a href="/cookies-policy">Cookies Policy</a></Link></li>
 							</ul>
 						</div>
 

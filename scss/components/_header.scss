@@ -1,8 +1,15 @@
 .site-header {
-	background: rgb(255 255 255 / 80%);
 	position: fixed;
 	width: 100%;
 	z-index: 100;
+}
+
+.site-header__outer-wrapper {
+	background: rgb(255 255 255 / 80%);
+}
+
+.site-header-spacer {
+	height: 120px;
 }
 
 .site-header__wrapper {
@@ -17,6 +24,7 @@
 
 .site-header__logo {
 	max-width: 120px;
+	width: 100%;
 }
 
 .site-header__nav {
@@ -59,6 +67,17 @@
   color: $greyHover;
 }
 
+.site-header__popup-message {
+	padding: 15px;
+	background: $lightOrange;
+	font-weight: $fontWeightBold;
+	border: 1px solid $grey;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
 /*
 	* Modifiers
 	*/
@@ -80,6 +99,10 @@
 	.site-header__nav {
 		font-size: 18px;
     margin-left: 10px;
+	}
+
+	.site-header-spacer {
+		height: 230px;
 	}
 
 	.site-header__wrapper {

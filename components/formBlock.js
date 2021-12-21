@@ -1,7 +1,7 @@
 
 import Script from 'next/script';
 
-export default function FormBlock({ background }) {
+export default function FormBlock({ background, title }) {
 
 	const backgroundColourMap = {
 		grey: 'background-block--grey',
@@ -10,6 +10,11 @@ export default function FormBlock({ background }) {
 
 	return (
 		<div className="form-block">
+			{title && (
+				<div className="form-block__title-wrapper">
+					<h3 className="form-block__title">{title}</h3>
+				</div>
+			)}
 			<div className={`form-block__row ${backgroundColourMap[background]}`}>
 				<div data-secure-form="crcounselling" data-secure-form-transparent-background="true"></div>
 				<Script src="https://hushforms.com/f/public/javascript/embed-hush-form.js" strategy="lazyOnload" />
