@@ -6,9 +6,9 @@ import LinkedInIcon from '../../public/images/logos/linkedin-logo.svg';
 export default function SocialIcons({ listClass }) {
 	return (
 		<ul className={`${listClass} social-icons-list remove-default-list inline-list inline-list--remove-spacers`}>
-			<li><InstagramIcon className="svg" /></li>
-			<li><FacebookIcon className="svg" /></li>
-			<li><LinkedInIcon className="svg" /></li>
+			<li><InstagramIcon title="Instagram" className="svg" /></li>
+			<li><FacebookIcon title="Facebook" className="svg" /></li>
+			<li><LinkedInIcon title="linked In" className="svg" /></li>
 
 
 		</ul>

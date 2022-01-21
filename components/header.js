@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Crclogo from '../public/images/logos/crcounselling-logo.svg'
+import CloseIcon from '../public/images/svg/close-cross.svg'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -22,13 +23,26 @@ export const Header = React.forwardRef(({ aboutMeRef, counsellingRef, appointmen
 
 	return (
 		<header className="site-header" ref={headerRef}>
+			{showPopupMessage && (
+				<div className="popup-message" id="popupMessage" role="dialog" aria-describedby="popup-message-description">
+					<div className="container-small">
+						<div className="row popup-message__row">
+							<p id="popup-message-description">I am not taking on new clients at the moment, lorem ispum dolar summit dolar summit At vero eos et accusamus et.</p>
+							<button className="popup-message__button" aria-controls="popupMessage" onClick={() => { setShowPopupMessage(false) }}>
+								<CloseIcon />
+								<span className="screen-reader screen-reader-focusable">Close</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			)}
 			<div className="site-header__outer-wrapper">
 				<div className="container">
 					<div className="site-header__wrapper">
 						<div className="site-header__inner container-small">
 							<Link href="/">
 								<a href="/">
-									<Crclogo className="site-header__logo" />
+									<Crclogo title="Catherine Robertson Counselling Logo" className="site-header__logo" />
 								</a>
 							</Link>
 							<nav>
@@ -75,14 +89,6 @@ export const Header = React.forwardRef(({ aboutMeRef, counsellingRef, appointmen
 					</div>
 				</div>
 			</div>
-			{showPopupMessage && (
-				<div className="site-header__popup-message">
-					<div className="container-small">
-						<p>I am not taking on new clients at the moment, lorem ispum dolar summit dolar summit At vero eos et accusamus et.</p>
-						<button onClick={() => { setShowPopupMessage(false) }}>X</button>
-					</div>
-				</div>
-			)}
 		</header>
 	)
 })
