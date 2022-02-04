@@ -9,7 +9,6 @@ class MyDocument extends Document {
 				<body>
 					<Main />
 					<NextScript />
-					<script src="/js/gumshoe.polyfills.min.js" />
 				</body>
 			</Html>
 		)
