@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Crclogo from '../public/images/logos/crcounselling-logo.svg'
 import CloseIcon from '../public/images/svg/close-cross.svg'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-export const Header = React.forwardRef(({ aboutMeRef, counsellingRef, appointmentsRef, contactRef, emdrRef }, headerRef) => {
+export const Header = React.forwardRef(({ aboutMeRef, counsellingRef, appointmentsRef, contactRef, emdrRef, addScrollSpy }, headerRef) => {
 
 	const router = useRouter();
 
@@ -20,6 +20,43 @@ export const Header = React.forwardRef(({ aboutMeRef, counsellingRef, appointmen
 			router.push(`/${e.target.hash}`)
 		}
 	}
+
+	useEffect(() => {
+		if (headerRef.current) {
+			/*
+			Initialize scroll spy on home page using addScrollSpy flag
+			*/
+
+			if (window.spy != undefined && addScrollSpy) {
+				window.spy = new Gumshoe('#site-header-navigation a', {
+					navClass: 'site-header__nav-list--active',
+					reflow: true,
+					offset: (headerRef.current.clientHeight + 5) // 5px offset so that nav becomes active just before section 
+				});
+
+				/* 
+					Look into bug where scroll spy is not initialized if users land on privacy page first then go homepage
+					Look into bug where pushstate is breaking the back button when going home > privacy > cookies then back to home
+				*/
+
+				// Listen for event when navigation becomes active then add active section hash to URL
+				// document.addEventListener('gumshoeActivate', function (event) {
+				// 	if (typeof window !== undefined) {
+				// 		var link = event.detail.link;
+				// 		const hash = link.href.split('#').pop();
+				// 		history.pushState({}, '', `#${hash}`)
+				// 	}
+				// }, false);
+			}
+		}
+
+		return function cleanup() {
+			if (window.spy != undefined && addScrollSpy) {
+				window.spy.destroy();
+			}
+		};
+
+	}, []);
 
 	return (
 		<header className="site-header" ref={headerRef}>

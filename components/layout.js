@@ -3,41 +3,12 @@ import Head from 'next/head'
 import { Header } from '../components/header'
 import Footer from '../components/footer'
 import GumShoeScript from '../components/gumShoeScript'
-export default function Layout({ children, aboutMeRef, counsellingRef, appointmentsRef, contactRef, emdrRef }) {
+import Script from 'next/script'
+
+
+export default function Layout({ children, aboutMeRef, counsellingRef, appointmentsRef, contactRef, emdrRef, addScrollSpy }) {
 
 	const headerRef = React.createRef();
-
-	useEffect(() => {
-		if (headerRef.current) {
-
-			/*
-				getting a bug with gumshoe when users navigate home > privacy policy > home, gumshoe is no longer initialized, investigate
-			*/
-
-			// if (window.spy != undefined) {
-
-			// 	window.spy = new Gumshoe('#site-header-navigation a', {
-			// 		navClass: 'site-header__nav-list--active',
-			// 		offset: (headerRef.current.clientHeight + 5) // 5px offset so that nav becomes active just before section 
-			// 	});
-
-			// 	// Listen for event when navigation becomes active then add active section hash to URL
-			// 	document.addEventListener('gumshoeActivate', function (event) {
-			// 		if (typeof window !== undefined) {
-			// 			var link = event.detail.link;
-			// 			const hash = link.href.split('#').pop();
-			// 			history.pushState({}, '', `#${hash}`)
-			// 		}
-			// 	}, false);
-
-			// 	if (aboutMeRef === undefined || counsellingRef === undefined || appointmentsRef === undefined || contactRef === undefined) {
-			// 		spy.destroy();
-			// 	}
-			// }
-
-		}
-
-	}, []);
 
 	useEffect(() => {
 
@@ -88,7 +59,7 @@ export default function Layout({ children, aboutMeRef, counsellingRef, appointme
 				{/* Fonts --------------------------------------------------------------- */}
 				<link rel="preconnect"
 					href="https://fonts.gstatic.com"
-					crossorigin />
+					crossOrigin />
 				<link rel="preload"
 					as="style"
 					href="//fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -110,11 +81,12 @@ export default function Layout({ children, aboutMeRef, counsellingRef, appointme
 				contactRef={contactRef}
 				emdrRef={emdrRef}
 				ref={headerRef}
+				addScrollSpy={addScrollSpy}
 			></Header>
 			<main>
 				{children}
 			</main>
-			<GumShoeScript headerRef={headerRef} />
+			<GumShoeScript headerRef={headerRef} addScrollSpy={addScrollSpy} />
 			<Footer></Footer>
 
 		</div>

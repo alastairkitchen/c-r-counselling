@@ -42,6 +42,7 @@ export default function Home() {
       appointmentsRef={appointmentsRef}
       contactRef={contactRef}
       emdrRef={emdrRef}
+      addScrollSpy
     >
       <HeroBanner />
       <ContentBanner content={containerContent} />
