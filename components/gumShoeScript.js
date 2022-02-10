@@ -9,7 +9,6 @@ export default function GumShoeScript({ headerRef, addScrollSpy }) {
 			strategy="afterInteractive"
 			onLoad={() => {
 
-				console.dir('addScrollSpy ' + addScrollSpy)
 				if (addScrollSpy) {
 					window.spy = new Gumshoe('#site-header-navigation a', {
 						navClass: 'site-header__nav-list--active',
@@ -18,16 +17,21 @@ export default function GumShoeScript({ headerRef, addScrollSpy }) {
 					});
 				}
 
-				// Listen for event when navigation becomes active then add active section hash to URL
-				// document.addEventListener('gumshoeActivate', function (event) {
-				// 	if (typeof window !== undefined) {
-				// 		var link = event.detail.link;
-				// 		const hash = link.href.split('#').pop();
-				// 		history.pushState({}, '', `#${hash}`)
-				// 	}
-				// }, false);
+				//Listen for event when navigation becomes active then add active section hash to URL
+				document.addEventListener('gumshoeActivate', function (event) {
+					if (typeof window !== undefined) {
+						var link = event.detail.link;
+						const hash = link.href.split('#').pop();
 
-				console.log('gumshoe initialised');
+						history.pushState({ url: `/#${hash}` }, '', `/#${hash}`)
+					}
+				}, false);
+
+				window.addEventListener('popstate', (event) => {
+					console.dir("location: " + document.location);
+					console.dir("state: " + JSON.stringify(event.state))
+				});
+
 			}}
 		/>
 	)

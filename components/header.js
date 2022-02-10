@@ -27,7 +27,8 @@ export const Header = React.forwardRef(({ aboutMeRef, counsellingRef, appointmen
 			Initialize scroll spy on home page using addScrollSpy flag
 			*/
 
-			if (window.spy != undefined && addScrollSpy) {
+			if (typeof Gumshoe === 'function' && addScrollSpy) {
+
 				window.spy = new Gumshoe('#site-header-navigation a', {
 					navClass: 'site-header__nav-list--active',
 					reflow: true,
@@ -35,18 +36,20 @@ export const Header = React.forwardRef(({ aboutMeRef, counsellingRef, appointmen
 				});
 
 				/* 
-					Look into bug where scroll spy is not initialized if users land on privacy page first then go homepage
+					FIXED Look into bug where scroll spy is not initialized if users land on privacy page first then go homepage
 					Look into bug where pushstate is breaking the back button when going home > privacy > cookies then back to home
+					- research pop state and react apps, do we need to load the home component on popstate when users go from privacy back to home?
 				*/
 
-				// Listen for event when navigation becomes active then add active section hash to URL
-				// document.addEventListener('gumshoeActivate', function (event) {
-				// 	if (typeof window !== undefined) {
-				// 		var link = event.detail.link;
-				// 		const hash = link.href.split('#').pop();
-				// 		history.pushState({}, '', `#${hash}`)
-				// 	}
-				// }, false);
+
+				//Listen for event when navigation becomes active then add active section hash to URL
+				document.addEventListener('gumshoeActivate', function (event) {
+					if (typeof window !== undefined) {
+						var link = event.detail.link;
+						const hash = link.href.split('#').pop();
+						history.pushState({ url: `/#${hash}` }, '', `/#${hash}`)
+					}
+				}, false);
 			}
 		}
 
