@@ -13,11 +13,12 @@ export const Header = React.forwardRef(({ aboutMeRef, counsellingRef, appointmen
 	const scrollToElement = (e, element) => {
 		e.preventDefault();
 		if (element) {
+			router.push(`/${e.target.hash}`);
 			const yOffset = headerRef.current.clientHeight;
 			const y = element.getBoundingClientRect().top + window.pageYOffset + -yOffset;
 			window.scrollTo({ top: y, behavior: 'smooth' });
 		} else {
-			router.push(`/${e.target.hash}`)
+			router.push(`/${e.target.hash}`);
 		}
 	}
 
@@ -34,22 +35,6 @@ export const Header = React.forwardRef(({ aboutMeRef, counsellingRef, appointmen
 					reflow: true,
 					offset: (headerRef.current.clientHeight + 5) // 5px offset so that nav becomes active just before section 
 				});
-
-				/* 
-					FIXED Look into bug where scroll spy is not initialized if users land on privacy page first then go homepage
-					Look into bug where pushstate is breaking the back button when going home > privacy > cookies then back to home
-					- research pop state and react apps, do we need to load the home component on popstate when users go from privacy back to home?
-				*/
-
-
-				//Listen for event when navigation becomes active then add active section hash to URL
-				document.addEventListener('gumshoeActivate', function (event) {
-					if (typeof window !== undefined) {
-						var link = event.detail.link;
-						const hash = link.href.split('#').pop();
-						history.pushState({ url: `/#${hash}` }, '', `/#${hash}`)
-					}
-				}, false);
 			}
 		}
 

@@ -10,6 +10,10 @@ export default function FormBlock({ background, title }) {
 
 	return (
 		<div className="form-block">
+			<Script
+				src="https://hushforms.com/f/public/javascript/embed-hush-form.js"
+				strategy="afterInteractive"
+			/>
 			{title && (
 				<div className="form-block__title-wrapper">
 					<h3 className="form-block__title">{title}</h3>
@@ -17,7 +21,6 @@ export default function FormBlock({ background, title }) {
 			)}
 			<div className={`form-block__row ${backgroundColourMap[background]}`}>
 				<div data-secure-form="crcounselling" data-secure-form-transparent-background="true"></div>
-				<Script src="https://hushforms.com/f/public/javascript/embed-hush-form.js" strategy="lazyOnload" />
 			</div>
 		</div>
 	)
