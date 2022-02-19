@@ -8,67 +8,64 @@ html {
 }
 
 body {
-  background-color: #ececec;
+  color: $grey;
+}
+
+.container-base {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  @extend .container-base;
+  max-width: $containerWidth;
+}
+
+.container-small {
+  @extend .container-base;
+  max-width: $containerSmWidth;
+}
+
+.container-xsmall {
+  @extend .container-base;
+  max-width: $containerXsWidth;
+}
+
+.container-xxsmall {
+  @extend .container-base;
+  max-width: $containerXxsWidth;
+}
+
+.container-large {
+  @extend .container-base;
+  max-width: $containerLgWidth;
+}
+
+.row {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bold-font {
+  font-weight: $fontWeightBold;
+}
+
+.placeholder-about-me {
+  height: 400px;
+  padding-top: 50px;
+  background: rgb(226, 226, 226);
   text-align: center;
-  padding: 0 20px;
 }
 
-h1 {
-  margin-top: 20%;
-  margin-top: 20vh;
-  margin-bottom: 50px;
-  position: relative;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-
-  span {
-    font-weight: 300;
-    display: block;
-  }
-
-  &:before {
-    content: "";
-    height: 3px;
-    width: 100%;
-    position: absolute;
-    background-color: #000000;
-    top: -10px;
-    left: 0;
-  }
-
-  &:after {
-    content: "";
-    height: 3px;
-    width: 100%;
-    position: absolute;
-    background-color: #000000;
-    bottom: -10px;
-    left: 0;
-  }
+.placeholder-counselling {
+  height: 400px;
+  padding-top: 50px;
+  background: rgb(226, 226, 226);
+  text-align: center;
 }
 
-a {
-  display: block;
-  background: #292727;
-  width: 150px;
-  margin: 0 auto 115px auto;
-  color: #fff;
-  text-decoration: none;
-  padding: 15px 15px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  box-shadow: 2px 4px #545353;
-  font-weight: 900;
-
-  &:hover {
-    background: #504e4e;
-  }
-}
-
-p.magrin {
-  margin-bottom: 15px;
+.placeholder-appointments {
+  
 }
 
 @media (min-width: 480px) {

@@ -1,0 +1,30 @@
+
+.form-block__row {
+	min-height: 100px;
+	padding: 15px;
+}
+
+.form-block__title-wrapper {
+	padding: 15px 20px 15px 20px;
+	background-color: $lightOrange;
+	font-size: 19px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.form-block__title {
+	font-weight: $fontWeightBold;
+	@include fluid-type(20px, 24px);
+}
+
+/*
+	* Media queries
+	*/
+
+@include mq($from: screen740) {
+
+	.form-block__row {
+		padding: 15px 20px;
+	}
+
+}

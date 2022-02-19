@@ -1,0 +1,141 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+
+/*
+	* Glide theming
+	*/
+
+.glide {
+	padding-bottom: 40px;
+	text-align: left;
+}
+
+.glide__slide {
+	height: 140px;
+	line-height: 1.4;
+	position: relative;
+	background-image: url(/images/quote-icon.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 15px) calc(100% - 15px);
+}
+
+.glide__slide-inner {
+	background-color: $fadeOrange;
+	padding: 20px;
+	line-height: 1.4;
+	border-radius: 5px;
+	position: absolute;
+	width: 100%;
+	height: calc(100% - 30px);
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.glide__bullets {
+	bottom: 30px;
+}
+
+.glide__bullet {
+	background-color: $lightOrange;
+	border: 2px solid $lightOrange;
+	opacity: 0.5;
+
+	&:hover,
+	&:focus {
+		background-color: $lightOrange;
+		border: 2px solid $lightOrange;
+	}
+
+	/*
+		* Modifiers
+		*/
+
+	&.glide__bullet--active {
+		opacity: 1;
+	}
+}
+
+
+
+.glide__arrows {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+}
+
+.glide__arrow {
+	background-color: $lightOrange;
+	border: none;
+	top: 0;
+	left: 0;
+	opacity: 0.7;
+	transition: opacity 0.2 ease;
+	text-transform: none;
+	font-size: 16px;
+
+	svg {
+		width: 0.8em;
+    height: 1em;
+    vertical-align: bottom;
+	}
+}
+
+.glide__arrow:hover {
+	opacity: 1;
+}
+
+.glide__arrow--left {
+	left: 0;
+}
+
+.glide__arrow--right {
+	right: 0;
+	left: auto;
+}
+
+/*
+	* Slideshow styling with no slideshow initialised
+	*/
+
+.slideshow-grid {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	text-align: left;
+
+	.slideshow-grid__slide:last-of-type {
+		margin-right: 0;
+	}
+}
+
+.slideshow-grid__slide {
+	@extend .glide__slide;
+	width: 32%;
+	margin-right: 20px;
+}
+
+.slideshow-grid__slide-inner {
+	@extend .glide__slide-inner;
+	width: auto;
+	height: calc(140px - 70px);
+}
+
+/*
+	* Slideshow Banner
+	*/
+
+.slideshow-banner {
+	padding: 50px 0;
+}
+
+.slideshow-banner__row {
+	text-align: center;
+}
+
+.slideshow-banner_title {
+	margin-bottom: 40px;
+}
+

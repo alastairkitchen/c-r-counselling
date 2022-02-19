@@ -1,6 +1,32 @@
 
-
-:focus {
-  outline: $black auto 1px;
+html {
+  font-size: 16px;
 }
 
+:focus {
+  outline: $black solid 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+ul {
+  margin: 0;
+  margin-bottom: 15px;
+  padding-left: 1.5em;
+
+  li::marker {
+    color: $yellow;
+    font-size: 1.5em;
+  }
+}
+
+address {
+  font-style: normal;
+}

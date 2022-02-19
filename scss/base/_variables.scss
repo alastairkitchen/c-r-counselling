@@ -4,21 +4,34 @@
 
 $white: #ffffff;
 $black: #000000;
-$lightGrey: #f5f5f5;
-$darkGrey: #171717;
-$darkGreyAlt: #2b2b2b;
-$lightYellow: #f6f7d8;
-$greyBlue: #435161;
-$greyBlueHover: #dae0e8;
+$lightGrey: #F8F8F8;
+$grey: #3A3939;
+$greyHover: #707070;
+$orange: #D97D00;
+$lightOrange: #F8A300;
+
+$fadeOrange: #FFEED6;
+$yellow: #F8E471;
 
 $darkGreyFade: rgba(0, 0, 0, 0.40);
 
 // fonts
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-bold: 500;
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightSemiBold: 500;
+$fontWeightBold: 600;
 
-$site-width: 1200px;
+$headerFontFamily: 'Barlow Condensed', sans-serif;
+
+$containerWidth: 1400px;
+$containerLgWidth: 1800px;
+$containerSmWidth: 1024px;
+$containerXsWidth: 795px;
+$containerXxsWidth: 700px;
+
+$siteSpacer: 15px;
+$siteSpacerLg: 30px;
+$siteSpacerXl: 40px;
 
 $gutters: (
 	"mobile": 25px,
