@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import SocialIcons from './socialIcons/socialIcons';
-import BacpLogo from '/Volumes/alimac/websites/c-r-counselling/public/images/accreditations/bacp-logo.png';
-import ActoLogo from '/Volumes/alimac/websites/c-r-counselling/public/images/accreditations/acto-logo.png';
+import BacpLogo from '../public/images/accreditations/bacp-logo.png';
+import ActoLogo from '../public/images/accreditations/acto-logo.png';
 import Link from 'next/link'
 
 export default function Footer() {
